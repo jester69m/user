@@ -1,10 +1,11 @@
-package com.task.user.services;
+package com.task.user.services.impl;
 
 import com.task.user.exceptions.UserNotAcceptableAge;
 import com.task.user.exceptions.UserNotFoundException;
 import com.task.user.models.User;
 import com.task.user.payloads.UserUpdateRequest;
 import com.task.user.repositories.UserRepository;
+import com.task.user.services.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,7 +22,7 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     @Value("${user.acceptable.age}")
